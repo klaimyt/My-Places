@@ -10,6 +10,9 @@ import UIKit
 
 class NewPlaceTableViewController: UITableViewController {
     
+    var newPlace: Place?
+    var imageIsChanged = false
+    
     @IBOutlet weak var placeImage: UIImageView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var placeName: UITextField!
@@ -22,6 +25,8 @@ class NewPlaceTableViewController: UITableViewController {
         tableView.tableFooterView = UIView()
         
         saveButton.isEnabled = false
+        
+        placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
     }
     
     // MARK: Table view delegate
@@ -56,15 +61,37 @@ class NewPlaceTableViewController: UITableViewController {
             view.endEditing(true)
         }
     }
+    @IBAction func cancelAction(_ sender: Any) {
+        dismiss(animated: true)
+    }
 }
-
-   // MARK: Text field delegate
+        // MARK: Text field delegate
     
 extension NewPlaceTableViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    @objc private func textFieldChanged() {
+        
+        if placeName.text?.isEmpty == false {
+            saveButton.isEnabled = true
+        } else {
+            saveButton.isEnabled = false
+        }
+    }
+    
+    func saveNewPlace() {
+        var image: UIImage?
+        
+        if imageIsChanged {
+            image = placeImage.image
+        } else {
+            image = #imageLiteral(resourceName: "imagePlaceholder")
+        }
+        newPlace = Place(name: placeName.text!, location: placeLocation.text, type: placeType.text, restaurantImage: nil, image: image)
     }
 }
 
@@ -85,6 +112,9 @@ extension NewPlaceTableViewController: UIImagePickerControllerDelegate, UINaviga
         placeImage.image = info[.editedImage] as? UIImage
         placeImage.contentMode = .scaleAspectFill
         placeImage.clipsToBounds = true
+        
+        imageIsChanged = true
+        
         dismiss(animated: true)
     }
     
