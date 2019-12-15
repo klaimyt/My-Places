@@ -17,7 +17,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                         <sections>
-                            <tableViewSection id="taG-Sc-VnF">
+                            <tableViewSection footerTitle="" id="taG-Sc-VnF">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="250" id="AD3-mZ-kKq">
                                         <rect key="frame" x="0.0" y="28" width="375" height="250"/>
@@ -144,6 +144,28 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="140" id="uDN-aR-XMG">
+                                        <rect key="frame" x="0.0" y="503" width="375" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uDN-aR-XMG" id="nam-ug-GJp">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="251.99999999999997" placeholderIntrinsicHeight="44" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aKE-gJ-7Pa" customClass="RaitingControl" customModule="MyPlaces" customModuleProvider="target">
+                                                    <rect key="frame" x="61.666666666666657" y="48" width="251.99999999999997" height="44"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="aKE-gJ-7Pa" firstAttribute="centerY" secondItem="nam-ug-GJp" secondAttribute="centerY" id="uWm-ia-Apc"/>
+                                                <constraint firstItem="aKE-gJ-7Pa" firstAttribute="centerX" secondItem="nam-ug-GJp" secondAttribute="centerX" id="yVU-Ti-dqQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -175,7 +197,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OiE-YZ-kCr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="zvN-nO-7na" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1625" y="163"/>
+            <point key="canvasLocation" x="1624.8" y="162.5615763546798"/>
         </scene>
         <!--My Places-->
         <scene sceneID="5P0-l8-Jia">
@@ -185,22 +207,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ogc-Oa-FNf">
-                                <rect key="frame" x="0.0" y="88" width="375" height="39"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="Ljy-BW-eD9"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="Date"/>
-                                    <segment title="Name"/>
-                                </segments>
-                                <connections>
-                                    <action selector="sortSelection:" destination="5gq-qz-zOQ" eventType="valueChanged" id="mLq-S1-OCA"/>
-                                </connections>
-                            </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="of8-XC-CrL">
-                                <rect key="frame" x="0.0" y="127" width="375" height="685"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="of8-XC-CrL">
+                                <rect key="frame" x="0.0" y="120" width="375" height="692"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="zlo-Gp-mhv" customClass="CustomTableViewCell" customModule="MyPlaces" customModuleProvider="target">
@@ -264,13 +272,26 @@
                                     <outlet property="delegate" destination="5gq-qz-zOQ" id="DkR-Nl-2ng"/>
                                 </connections>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ogc-Oa-FNf">
+                                <rect key="frame" x="0.0" y="88" width="375" height="32"/>
+                                <segments>
+                                    <segment title="Date"/>
+                                    <segment title="Name"/>
+                                </segments>
+                                <connections>
+                                    <action selector="sortSelection:" destination="5gq-qz-zOQ" eventType="valueChanged" id="mLq-S1-OCA"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="of8-XC-CrL" firstAttribute="leading" secondItem="Jmd-fQ-KV9" secondAttribute="leading" id="1PO-Ac-mXV"/>
                             <constraint firstItem="ogc-Oa-FNf" firstAttribute="leading" secondItem="Jmd-fQ-KV9" secondAttribute="leading" id="5I6-mY-Lm2"/>
+                            <constraint firstItem="of8-XC-CrL" firstAttribute="trailing" secondItem="Jmd-fQ-KV9" secondAttribute="trailing" id="6eT-0k-Zzy"/>
+                            <constraint firstItem="of8-XC-CrL" firstAttribute="top" secondItem="ogc-Oa-FNf" secondAttribute="bottom" constant="1" id="All-if-2he"/>
                             <constraint firstItem="Jmd-fQ-KV9" firstAttribute="trailing" secondItem="ogc-Oa-FNf" secondAttribute="trailing" id="CVe-t7-nF2"/>
+                            <constraint firstAttribute="bottom" secondItem="of8-XC-CrL" secondAttribute="bottom" id="Yl5-Ip-Vj1"/>
                             <constraint firstItem="ogc-Oa-FNf" firstAttribute="top" secondItem="Jmd-fQ-KV9" secondAttribute="top" id="q1Z-iZ-Ww6"/>
-                            <constraint firstItem="of8-XC-CrL" firstAttribute="top" secondItem="ogc-Oa-FNf" secondAttribute="bottom" constant="1" id="vOn-RW-u60"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jmd-fQ-KV9"/>
                     </view>

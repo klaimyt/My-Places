@@ -13,6 +13,7 @@
 		2313C5EE23A251B100BEE4B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2313C5ED23A251B100BEE4B1 /* Assets.xcassets */; };
 		2313C5F123A251B100BEE4B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2313C5EF23A251B100BEE4B1 /* LaunchScreen.storyboard */; };
 		2313C5F923A2562500BEE4B1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2313C5F823A2562500BEE4B1 /* MainViewController.swift */; };
+		237BB10B23A64B9300432C7D /* RaitingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237BB10A23A64B9300432C7D /* RaitingControl.swift */; };
 		23A1157D23A2B9550045EB4F /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1157C23A2B9550045EB4F /* PlaceModel.swift */; };
 		23A1157F23A2D1FF0045EB4F /* NewPlaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1157E23A2D1FF0045EB4F /* NewPlaceTableViewController.swift */; };
 		23D0BEE523A5162D00C518E5 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D0BEE423A5162D00C518E5 /* StorageManager.swift */; };
@@ -30,6 +31,7 @@
 		2313C5F023A251B100BEE4B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2313C5F223A251B100BEE4B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2313C5F823A2562500BEE4B1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../../MainViewController.swift; sourceTree = "<group>"; };
+		237BB10A23A64B9300432C7D /* RaitingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaitingControl.swift; sourceTree = "<group>"; };
 		23A1157C23A2B9550045EB4F /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		23A1157E23A2D1FF0045EB4F /* NewPlaceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceTableViewController.swift; sourceTree = "<group>"; };
 		23D0BEE423A5162D00C518E5 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				23FFA14823A28B2F00044812 /* CustomTableViewCell.swift */,
 				23A1157E23A2D1FF0045EB4F /* NewPlaceTableViewController.swift */,
 				2313C5EA23A251B000BEE4B1 /* Main.storyboard */,
+				237BB10A23A64B9300432C7D /* RaitingControl.swift */,
 				2313C5ED23A251B100BEE4B1 /* Assets.xcassets */,
 				2313C5EF23A251B100BEE4B1 /* LaunchScreen.storyboard */,
 				2313C5F223A251B100BEE4B1 /* Info.plist */,
@@ -224,6 +227,7 @@
 				23D0BEE523A5162D00C518E5 /* StorageManager.swift in Sources */,
 				23A1157D23A2B9550045EB4F /* PlaceModel.swift in Sources */,
 				23FFA14923A28B2F00044812 /* CustomTableViewCell.swift in Sources */,
+				237BB10B23A64B9300432C7D /* RaitingControl.swift in Sources */,
 				2313C5E723A251B000BEE4B1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
