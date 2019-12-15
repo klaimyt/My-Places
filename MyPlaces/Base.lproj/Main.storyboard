@@ -227,39 +227,48 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="BUM-Dl-8MB">
-                                                    <rect key="frame" x="96" y="8" width="263" height="69"/>
+                                                    <rect key="frame" x="96" y="8" width="44" height="69"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nd-fj-S5z">
-                                                            <rect key="frame" x="0.0" y="0.0" width="263" height="24.333333333333332"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="44" height="24.333333333333332"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GpN-WN-E9L">
-                                                            <rect key="frame" x="0.0" y="27.333333333333336" width="263" height="20.333333333333336"/>
+                                                            <rect key="frame" x="0.0" y="27.333333333333336" width="44" height="20.333333333333336"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4t-nA-gz9">
-                                                            <rect key="frame" x="0.0" y="50.666666666666664" width="263" height="18.333333333333336"/>
+                                                            <rect key="frame" x="0.0" y="50.666666666666664" width="44" height="18.333333333333336"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z7I-RR-ak9" customClass="CosmosView" customModule="Cosmos">
+                                                    <rect key="frame" x="246" y="32.666666666666664" width="121" height="20"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="121" id="Zgx-WB-PJd"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="BUM-Dl-8MB" secondAttribute="trailing" constant="16" id="Akg-1g-4eW"/>
                                                 <constraint firstItem="BUM-Dl-8MB" firstAttribute="top" secondItem="BPQ-Cd-vQ3" secondAttribute="top" constant="8" id="Ftb-q5-xGQ"/>
                                                 <constraint firstItem="bic-7T-eQB" firstAttribute="centerY" secondItem="BPQ-Cd-vQ3" secondAttribute="centerY" id="I3x-fa-vhr"/>
+                                                <constraint firstItem="Z7I-RR-ak9" firstAttribute="centerY" secondItem="BPQ-Cd-vQ3" secondAttribute="centerY" id="X9I-iN-sh5"/>
                                                 <constraint firstItem="BUM-Dl-8MB" firstAttribute="leading" secondItem="bic-7T-eQB" secondAttribute="trailing" constant="16" id="eb0-Kg-tNW"/>
                                                 <constraint firstAttribute="bottom" secondItem="BUM-Dl-8MB" secondAttribute="bottom" constant="8" id="jrT-Yj-U66"/>
+                                                <constraint firstAttribute="trailing" secondItem="Z7I-RR-ak9" secondAttribute="trailing" constant="8" id="kpU-lG-gIU"/>
                                                 <constraint firstItem="bic-7T-eQB" firstAttribute="leading" secondItem="BPQ-Cd-vQ3" secondAttribute="leading" constant="15" id="nLp-Kd-U5x"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cosmosView" destination="Z7I-RR-ak9" id="GHk-HO-O5S"/>
                                             <outlet property="imageOfPlace" destination="bic-7T-eQB" id="ep1-1j-9Bj"/>
                                             <outlet property="nameLabel" destination="3nd-fj-S5z" id="4Jd-qA-KV1"/>
                                             <outlet property="placeLabel" destination="GpN-WN-E9L" id="vKu-vI-jAr"/>
