@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2310734B23A7B68C0060DD0B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310734A23A7B68C0060DD0B /* MapViewController.swift */; };
 		2313C5E523A251B000BEE4B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2313C5E423A251B000BEE4B1 /* AppDelegate.swift */; };
 		2313C5E723A251B000BEE4B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2313C5E623A251B000BEE4B1 /* SceneDelegate.swift */; };
 		2313C5EC23A251B000BEE4B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2313C5EA23A251B000BEE4B1 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		0432FC009936F0EC62EB1CDE /* Pods_MyPlaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPlaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2310734A23A7B68C0060DD0B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2313C5E123A251B000BEE4B1 /* MyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2313C5E423A251B000BEE4B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2313C5E623A251B000BEE4B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				23FFA14823A28B2F00044812 /* CustomTableViewCell.swift */,
 				23A1157E23A2D1FF0045EB4F /* NewPlaceTableViewController.swift */,
 				2313C5EA23A251B000BEE4B1 /* Main.storyboard */,
+				2310734A23A7B68C0060DD0B /* MapViewController.swift */,
 				237BB10A23A64B9300432C7D /* RaitingControl.swift */,
 				2313C5ED23A251B100BEE4B1 /* Assets.xcassets */,
 				2313C5EF23A251B100BEE4B1 /* LaunchScreen.storyboard */,
@@ -225,6 +228,7 @@
 				2313C5F923A2562500BEE4B1 /* MainViewController.swift in Sources */,
 				2313C5E523A251B000BEE4B1 /* AppDelegate.swift in Sources */,
 				23D0BEE523A5162D00C518E5 /* StorageManager.swift in Sources */,
+				2310734B23A7B68C0060DD0B /* MapViewController.swift in Sources */,
 				23A1157D23A2B9550045EB4F /* PlaceModel.swift in Sources */,
 				23FFA14923A28B2F00044812 /* CustomTableViewCell.swift in Sources */,
 				237BB10B23A64B9300432C7D /* RaitingControl.swift in Sources */,
