@@ -271,6 +271,17 @@
                                     <action selector="doneButtonPressed" destination="DkT-Hb-BGj" eventType="touchUpInside" id="j4Y-nx-1Bd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMg-Tc-2hF">
+                                <rect key="frame" x="162.66666666666666" y="688" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="VzP-jp-9gt"/>
+                                    <constraint firstAttribute="width" constant="50" id="jAh-UL-mrk"/>
+                                </constraints>
+                                <state key="normal" image="GetDirection"/>
+                                <connections>
+                                    <action selector="goButtonPressed" destination="DkT-Hb-BGj" eventType="touchUpInside" id="ESj-O7-8xU"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ww2-vY-gfY">
                                 <rect key="frame" x="305" y="612" width="30" height="30"/>
                                 <constraints>
@@ -290,6 +301,7 @@
                             <constraint firstItem="BNx-3q-kPR" firstAttribute="trailing" secondItem="jde-cp-Ijn" secondAttribute="trailing" constant="40" id="McN-9x-lBT"/>
                             <constraint firstItem="s8c-mL-d6D" firstAttribute="centerX" secondItem="Lws-Nc-Vct" secondAttribute="centerX" id="O7T-rf-buM"/>
                             <constraint firstItem="BNx-3q-kPR" firstAttribute="trailing" secondItem="U0S-WI-goL" secondAttribute="trailing" constant="16" id="PiQ-mO-nip"/>
+                            <constraint firstItem="UMg-Tc-2hF" firstAttribute="centerX" secondItem="Lws-Nc-Vct" secondAttribute="centerX" id="QLm-11-9zj"/>
                             <constraint firstAttribute="bottom" secondItem="dWd-2N-IK7" secondAttribute="bottom" id="bQh-VD-uBX"/>
                             <constraint firstItem="BNx-3q-kPR" firstAttribute="trailing" secondItem="ww2-vY-gfY" secondAttribute="trailing" constant="40" id="dd1-fT-d1k"/>
                             <constraint firstItem="dWd-2N-IK7" firstAttribute="top" secondItem="U0S-WI-goL" secondAttribute="bottom" constant="-217" id="gnX-Tb-Tk2"/>
@@ -297,6 +309,7 @@
                             <constraint firstItem="niN-jq-tXY" firstAttribute="centerX" secondItem="Lws-Nc-Vct" secondAttribute="centerX" id="jdW-Fg-7J9"/>
                             <constraint firstItem="dWd-2N-IK7" firstAttribute="top" secondItem="Lws-Nc-Vct" secondAttribute="top" id="jq1-Ef-5Al"/>
                             <constraint firstItem="s8c-mL-d6D" firstAttribute="centerY" secondItem="Lws-Nc-Vct" secondAttribute="centerY" constant="-20" id="oQ8-3L-k1I"/>
+                            <constraint firstItem="BNx-3q-kPR" firstAttribute="bottom" secondItem="UMg-Tc-2hF" secondAttribute="bottom" constant="40" id="p4c-ku-Rru"/>
                             <constraint firstItem="dWd-2N-IK7" firstAttribute="leading" secondItem="BNx-3q-kPR" secondAttribute="leading" id="tMQ-Q6-sBn"/>
                             <constraint firstItem="U0S-WI-goL" firstAttribute="leading" secondItem="BNx-3q-kPR" secondAttribute="leading" constant="16" id="trk-31-zSf"/>
                             <constraint firstItem="BNx-3q-kPR" firstAttribute="bottom" secondItem="ww2-vY-gfY" secondAttribute="bottom" constant="136" id="xQd-sA-jdK"/>
@@ -306,6 +319,7 @@
                     <connections>
                         <outlet property="addressLabel" destination="U0S-WI-goL" id="Uhn-xg-TT9"/>
                         <outlet property="doneButton" destination="niN-jq-tXY" id="jE0-Vj-Ybx"/>
+                        <outlet property="goButton" destination="UMg-Tc-2hF" id="xgY-fK-gKi"/>
                         <outlet property="mapPinImage" destination="s8c-mL-d6D" id="Ekf-C8-ukp"/>
                         <outlet property="mapView" destination="dWd-2N-IK7" id="9eP-yg-CyV"/>
                     </connections>
@@ -481,6 +495,7 @@
     </scenes>
     <resources>
         <image name="AZ" width="25" height="24"/>
+        <image name="GetDirection" width="50" height="50"/>
         <image name="Location" width="128" height="128"/>
         <image name="Photo" width="194.66667175292969" height="195.66667175292969"/>
         <image name="Pin" width="40" height="40"/>
