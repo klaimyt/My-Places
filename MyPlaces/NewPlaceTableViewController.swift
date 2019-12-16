@@ -127,13 +127,9 @@ extension NewPlaceTableViewController: UITextFieldDelegate {
     func savePlace() {
        
         
-        var image: UIImage?
+        let image = imageIsChanged ? placeImage.image : #imageLiteral(resourceName: "imagePlaceholder")
 
-        if imageIsChanged {
-            image = placeImage.image
-        } else {
-            image = #imageLiteral(resourceName: "imagePlaceholder")
-        }
+        
         let imageData = image?.pngData()
         
         let newPlace = Place(name: placeName.text!,
