@@ -121,7 +121,7 @@
                                                     </constraints>
                                                     <state key="normal" image="Placeholder"/>
                                                     <connections>
-                                                        <segue destination="DkT-Hb-BGj" kind="presentation" identifier="getAdress" id="Cld-71-Ihn"/>
+                                                        <segue destination="DkT-Hb-BGj" kind="presentation" identifier="getAddress" id="Cld-71-Ihn"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -489,7 +489,7 @@
         <image name="map" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZwE-G3-Lra"/>
+        <segue reference="Cld-71-Ihn"/>
         <segue reference="iqf-R5-WAo"/>
     </inferredMetricsTieBreakers>
 </document>

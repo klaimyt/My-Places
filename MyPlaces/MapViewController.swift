@@ -10,9 +10,15 @@ import UIKit
 import MapKit
 import CoreLocation
 
+protocol MapViewControllerDelegate {
+    func getAddress(_ address: String?)
+}
+
 class MapViewController: UIViewController {
     
+    var mapViewControllerDelegate: MapViewControllerDelegate?
     var place = Place()
+    
     let annotationIdentifire = "annotationIdentifire"
     let locationManager = CLLocationManager()
     let regionInMeters = 10_000.00
@@ -38,6 +44,9 @@ class MapViewController: UIViewController {
         showUserLocation()
     }
     @IBAction func doneButtonPressed() {
+        mapViewControllerDelegate?.getAddress(addressLabel.text)
+        dismiss(animated: true)
+        
     }
     
     @IBAction func closeVC(_ sender: UIButton) {
@@ -107,7 +116,7 @@ class MapViewController: UIViewController {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse:
             mapView.showsUserLocation = true
-            if incomeSegeIdentifire == "getAdress" { showUserLocation() }
+            if incomeSegeIdentifire == "getAddress" { showUserLocation() }
             break
         case .denied:
             showAlert(title: "Your Location is not Availeble", message: "To give premission Go to: Settings → MyPlaces → Location")
